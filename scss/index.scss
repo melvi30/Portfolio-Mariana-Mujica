@@ -20,7 +20,7 @@
         min-height: 6em;
         // background-color: honeydew;
         margin: auto;
-        @include flex( row , wrap , center , center);
+        @include flex( row , wrap , space-between , center);
 
 
     }

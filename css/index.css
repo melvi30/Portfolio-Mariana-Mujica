@@ -96,7 +96,7 @@ body {
   margin: auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
 }
 .header_logo {
