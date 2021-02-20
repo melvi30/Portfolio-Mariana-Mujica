@@ -1,0 +1,32 @@
+/* Definición de estilos de la web por medio de Custom properties */ 
+
+:root{
+    /* Colores principales */
+    --negro : #000000;
+    --gris  : #393939;
+    --blanco: white;
+  
+    /* Colores secundarios */
+    --lila: #AA00FF;
+    --lila-claro:#aa00ff8f;
+    --hover-fondo: #ffffffea;
+  
+    /* tipografias*/
+    
+    --tipo-principal: 'Roboto', sans-serif;
+    // --tipo-secundaria: 'Suez One', serif;
+}
+
+/* Definición de esquema de colores para modo oscuro*/ 
+@media (prefers-color-scheme: dark) {
+    :root{
+        /* Colores principales */
+        --negro: #ffffff;
+        --gris: #c2c2c2;
+        --blanco: #000000;
+        
+        /* Colores secundarios */
+        --lila: #AA00FF;
+        --hover-fondo:rgb(17, 5, 5);
+    }
+}    

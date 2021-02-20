@@ -1,0 +1,11 @@
+:root {
+  /* Colores principales */
+  --negro: #000000;
+  --gris: #393939;
+  --blanco: white;
+  /* Colores secundarios */
+  --lila: #efafff;
+  /* tipografias*/
+  --tipo-principal: "Roboto", sans-serif;
+  --tipo-secundaria: ;
+}
