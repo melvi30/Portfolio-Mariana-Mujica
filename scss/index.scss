@@ -33,13 +33,7 @@ html{
         font-size: 3em;
         font-weight: 900;
         animation: pulse 5s infinite;
-
-        // transition: all .7s ease;
-
-        &:hover{
-            // color: var(--lila);
-        }
-        
+       
     }
     &_fas{
         display: none;
