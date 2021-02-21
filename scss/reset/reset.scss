@@ -19,7 +19,7 @@ li {
     list-style: none;
 }
   
-h1, h2, h3, h4, h5, h6, strong {
+h1, h2, h3, h4, h5, h6, strong , i{
     font-size: inherit;
     font-weight: inherit;
 }
@@ -48,3 +48,4 @@ body {
     font-family:var(--tipo-principal);
     line-height: 1.7em;
 }
+

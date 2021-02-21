@@ -1,5 +1,8 @@
 @import "reset/mixins.scss" , "reset/reset.scss" , "reset/variables.scss";
 
+html{
+    scroll-behavior: smooth;
+}
 .body{
     @media screen and (max-width: 960px){
         font-size: 70%;
@@ -9,7 +12,7 @@
     width: 100%;
     min-height: 6em;
     // background-color: grey;
-    // padding: 1.2em 0;
+    // padding: 1em 0;
     position: fixed;
     top: 0;
     background-color: var(--blanco);
@@ -20,9 +23,7 @@
         min-height: 6em;
         // background-color: honeydew;
         margin: auto;
-        @include flex( row , wrap , space-between , center);
-
-
+        @include flex( row , nowrap , space-between , center);
     }
     &_logo{
         width: 100%;
@@ -105,8 +106,7 @@
             
 
             transform: translateX(200%);
-            
-
+    
         }
     }
     &_li{
@@ -232,31 +232,69 @@
     
 
     }
-    &_h4{
+    &_hover{
         width: 100%;
         min-height: 100%;
         background-color: var(--hover-fondo);
-
-        font-weight: 700;
-        font-size: 1.2em;
 
         position: absolute;
         top:0;
         left: 0;
 
-        @include flex( row , wrap , center , center);
+        @include flex( column , wrap , center , center);
         opacity: 0;
         transition: all .5s ease;
 
         &:hover{
             opacity: 1;
+        } 
+
+        .raya{
+            // width: 8em;
+            height: .14em;
+            background-color:var(--negro);
+            margin-bottom: 1em;
+            
+
         }
     }
+        &_h4{
+            font-weight: 700;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            margin-bottom: .2em;
+
+        }
+
+        &_verweb{
+            font-weight: 400;
+            font-size: 1em;
+            margin-bottom: .3em;
+            transition: all .5s ease;
+
+            &:hover{
+                color: var(--lila);
+            }
+        }
+        &_a{
+            font-weight: 400;
+            font-size: 1em;
+            transition: all .5s ease;
+
+            &:hover{
+                color: var(--lila);
+            }
+            
+        }
+        &_git{
+            margin: 0 .5em;
+            font-size: 1.2em
+        }
 }
 .about{
     width: 100%;
     min-height: 100vh;
-    // background-color: rgb(144, 203, 238); 
+    // background-color: rgb(144, 203, 238);
     
     @include flex( row , nowrap , center , center );
 
@@ -266,8 +304,9 @@
 
     &_centrado{
         width: 90%;
-        min-height: 20em;
+        // min-height: 20em;
         // background-color: aquamarine;  
+        margin-top: 2em;
                         
         @include flex( row, nowrap , space-between , center );
 
@@ -304,17 +343,19 @@
 
     }
     &_cv{
-        width: 6em;
-        height: 6em;
+        // width: 10em;
+        // height: 6em;
         margin: 1em 0 0 0;
         padding: .8em;
-        border-radius: 50%;
+        // border: solid .3em var(--negro);
         background-color: var(--negro);
         color: var(--blanco);
         font-weight: 600;
         transition: all .5s ease;
             &:hover{
-                background-color: var(--lila);
+                border: solid .3em var(--lila);
+                background-color: var(--blanco);
+                color:var(--lila);
             }
             @media screen and (max-width: 960px){
                 font-size: 95%;
@@ -333,14 +374,14 @@
 }
 .contacto{
     width: 100%;
-    min-height: 20vh;
+    min-height: 25vh;
     background-color: var(--negro);
     color: var(--blanco);
     
 
     &_centrado{
         width: 90%;
-        min-height: 20vh;
+        // min-height: 25vh;
         margin: auto;
         // background-color: rgb(48, 87, 74);
         @include flex( column , nowrap , center , center );
@@ -350,22 +391,36 @@
     &_h2{
         font-weight: 900;
         font-size: 2em;
-        margin-bottom: 1em;
+        margin: 1.5em 0;
         text-transform: uppercase;
     }
+
     &_email{
-        margin-bottom: .5em;
         transition: all .5s ease;
         &:hover{
             color:var(--lila);
         }
     }
+    &_fabm{
+        margin: 0 .5em;
+    }
+
+    &_ul{
+        @include flex( row , nowrap , center , center );
+        margin-top: 1em;
     
-    &_fab{
-        margin: 0 .5em 0 0;
     }
     &_linkedin{
         transition: all .5s ease;
+        margin: 0 1em;
+        font-size: 1.2em;
+        &:hover{
+            color:var(--lila);
+        }
+    }
+    &_git{
+        transition: all .5s ease;
+        font-size: 1.2em;
         &:hover{
             color:var(--lila);
         }

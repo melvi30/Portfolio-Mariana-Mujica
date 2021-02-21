@@ -20,7 +20,7 @@ li {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+h1, h2, h3, h4, h5, h6, strong, i {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -77,6 +77,10 @@ body {
     --hover-fondo:rgb(17, 5, 5);
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 @media screen and (max-width: 960px) {
   .body {
     font-size: 70%;
@@ -95,9 +99,9 @@ body {
   min-height: 6em;
   margin: auto;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
 }
 .header_logo {
   width: 100%;
@@ -257,24 +261,54 @@ body {
 .grid_div.more_p {
   color: var(--blanco);
 }
-.grid_h4 {
+.grid_hover {
   width: 100%;
   min-height: 100%;
   background-color: var(--hover-fondo);
-  font-weight: 700;
-  font-size: 1.2em;
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-content: center;
   opacity: 0;
   transition: all 0.5s ease;
 }
-.grid_h4:hover {
+.grid_hover:hover {
   opacity: 1;
+}
+.grid_hover .raya {
+  height: 0.14em;
+  background-color: var(--negro);
+  margin-bottom: 1em;
+}
+.grid_h4 {
+  font-weight: 700;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.2em;
+}
+.grid_verweb {
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 0.3em;
+  transition: all 0.5s ease;
+}
+.grid_verweb:hover {
+  color: var(--lila);
+}
+.grid_a {
+  font-weight: 400;
+  font-size: 1em;
+  transition: all 0.5s ease;
+}
+.grid_a:hover {
+  color: var(--lila);
+}
+.grid_git {
+  margin: 0 0.5em;
+  font-size: 1.2em;
 }
 
 .about {
@@ -295,7 +329,7 @@ body {
 }
 .about_centrado {
   width: 90%;
-  min-height: 20em;
+  margin-top: 2em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -340,18 +374,17 @@ body {
   }
 }
 .about_cv {
-  width: 6em;
-  height: 6em;
   margin: 1em 0 0 0;
   padding: 0.8em;
-  border-radius: 50%;
   background-color: var(--negro);
   color: var(--blanco);
   font-weight: 600;
   transition: all 0.5s ease;
 }
 .about_cv:hover {
-  background-color: var(--lila);
+  border: solid 0.3em var(--lila);
+  background-color: var(--blanco);
+  color: var(--lila);
 }
 @media screen and (max-width: 960px) {
   .about_cv {
@@ -371,13 +404,12 @@ body {
 
 .contacto {
   width: 100%;
-  min-height: 20vh;
+  min-height: 25vh;
   background-color: var(--negro);
   color: var(--blanco);
 }
 .contacto_centrado {
   width: 90%;
-  min-height: 20vh;
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
@@ -388,22 +420,37 @@ body {
 .contacto_h2 {
   font-weight: 900;
   font-size: 2em;
-  margin-bottom: 1em;
+  margin: 1.5em 0;
   text-transform: uppercase;
 }
 .contacto_email {
-  margin-bottom: 0.5em;
   transition: all 0.5s ease;
 }
 .contacto_email:hover {
   color: var(--lila);
 }
-.contacto_fab {
-  margin: 0 0.5em 0 0;
+.contacto_fabm {
+  margin: 0 0.5em;
+}
+.contacto_ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
 }
 .contacto_linkedin {
   transition: all 0.5s ease;
+  margin: 0 1em;
+  font-size: 1.2em;
 }
 .contacto_linkedin:hover {
+  color: var(--lila);
+}
+.contacto_git {
+  transition: all 0.5s ease;
+  font-size: 1.2em;
+}
+.contacto_git:hover {
   color: var(--lila);
 }

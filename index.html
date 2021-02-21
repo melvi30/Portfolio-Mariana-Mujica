@@ -20,72 +20,88 @@
             <i class="header_fas fas fa-bars" id="fas"></i>
             <nav class="header_nav nav" id="menu">
                 <ul class="header_ul">
-                    <li class="header_li"><a href="#home" title="home" rel="noopener noreferrer">Home</li></a>
-                    <li class="header_li"><a href="#trabajos" title="trabajos" rel="noopener noreferrer">Trabajos</li></a>
-                    <li class="header_li"><a href="#about" title="about" rel="noopener noreferrer">About</li></a>
-                    <li class="header_li"><a href="#contacto" title="contacto" rel="noopener noreferrer">Contacto</li></a>
+                    <li class="header_li"><a href="#section-1" title="home">Home</a></li>
+                    <li class="header_li"><a href="#section-2" title="trabajos">Trabajos</a></li>
+                    <li class="header_li"><a href="#section-3" title="about">About</a></li>
+                    <li class="header_li"><a href="#section-4" title="contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="section home" id="home">
-        <div class="home_centro">
-            <h2 class="home_h2">Hola! soy Mariana E. Mujica G. (aka: Melvi)</h2>
-            <i class="home_fab fas fas fa-arrow-down"></i>
-            <h3 class="home_h3">Desarrolladora Front-End y Marketiniana.</h3>
-            
-            <p class="home_p">Construyo páginas webs adaptables y accesibles, utilizando lenguajes como: <strong>HTML,Css y Javascript.</strong></p>
-        </div>
-    </section>
-    <section class="section trabajos" id="trabajos">
-        <h2 class="trabajos_h2">Trabajos</h2>
-
-        <div class="trabajos grid">
-
-            <div class="grid_div pixar">
-                <img class="grid_div img" src="assets/Pixar2.png" alt="Pixar" loading="lazy"></img>
-                <h4 class="grid_h4">Replica web de Pixar</h4>
-            </div>
-            <div class="grid_div stk">
-                <img class="grid_div img" src="assets/stk.png" alt="Stockholm" loading="lazy"><a href=""></a></img>
-                <h4 class="grid_h4">Replica web de plantilla: Stockholm</h4>
-            </div>
-            <div class="grid_div form">
-                <img class="grid_div img" src="assets/form1.png" alt="Formulario" loading="lazy"><a href=""></a></img>
-                <h4 class="grid_h4">Ejemplo de formulario de telefónica</h4>
-            </div>
-
-            <div class="grid_div more">
-                <img class="grid_div img" src="assets/texto.png" alt="Formulario" loading="lazy"><a href=""></a></img>
-                <h4 class="grid_h4"></h4>
-            </div>
-
-        </div>
-
-
-    </section>
-    <section class="section about" id="about"> 
-        <div class="about_centrado">
-            <div class="about_div">
-                <h2 class="about_h2">About me!</h2>
-                <p class="about_p"> Hola!, mi nombre es Mariana Mujica (aka: Melvi). Soy desarrolladora Front-End y utilizo lenguajes como: HTML, CSS y Javascript, para dar vida a mis proyectos. Tengo formación en Marketing Digital, lo cual me permite combinar ambos mundos para que las páginas tengan el mejor performance y UX posibles. </p>
-                <button class="about_cv"><a href="assets/cv/CV Mariana Mujica ES.pdf" target="_blank" title="cv_mariana_mujica" rel="noopener noreferrer">Descarga mi CV</button></a>
-            </div>
-            <div class="about_div">
-                <img class="about_img" src="assets/me1.png" alt="Mariana-Mujica" loading="lazy">
-            </div>
-        </div>
-    </section>
-    <section class="contacto" id="contacto">
-        <div class="contacto_centrado">
-            <h2 class="contacto_h2">Contacto:</h2>
-            <p class="contacto_email"><i class="contacto_fab far fa-envelope"></i><a class="mail2" href="mailto:hola@bymelvi.com" title="email" target="_blank" rel="noopener noreferrer">hola@bymelvi.com</a></p>
-            <p class="contacto_linkedin"><i class="contacto_fab fab fa-linkedin-in"></i><a class="linkedin2" href="https://www.linkedin.com/in/marianamujicag/" title="linkedin" target="_blank" rel="noopener noreferrer">Escríbeme por linkedin</a></p>
-
-
-        </div>
-    </section>
     
+        <section class="section home" id="section-1">
+            <div class="home_centro">
+                <h2 class="home_h2">Hola! soy Mariana E. Mujica G. (aka: Melvi)</h2>
+                <i class="home_fab fas fas fa-arrow-down"></i>
+                <h3 class="home_h3">Desarrolladora Front-End y Marketiniana.</h3>
+                
+                <p class="home_p">Construyo páginas webs adaptables y accesibles, utilizando lenguajes como: <strong>HTML,Css y Javascript.</strong></p>
+            </div>
+        </section>
+        <section class="section trabajos" id="section-2">
+            <h2 class="trabajos_h2">Trabajos</h2>
+
+            <div class="trabajos grid">
+
+                <div class="grid_div pixar">
+                    <img class="grid_div img" src="assets/Pixar2.png" alt="Pixar" loading="lazy">
+                    <div class="grid_hover">
+                        <h4 class="grid_h4">Replica web de Pixar</h4>
+                        <div class="hover raya"></div>
+                        <a href="projectos/Pixar/index.html" class="grid_verweb" title="ver web" target="_blank" rel="noopener noreferrer"> Ver página web</a>
+                        <a href="https://github.com/melvi30/Pixar-web" class="grid_a" target="_blank" title="github" rel="noopener noreferrer"><i class="grid_git fab fab fa-github"></i>Ver código</a>
+                    </div>
+                </div>
+                <div class="grid_div stk">
+                    <img class="grid_div img" src="assets/stk.png" alt="Stockholm" loading="lazy">
+                    <div class="grid_hover">    
+                        <h4 class="grid_h4">Replica web de plantilla: Stockholm</h4>
+                        <div class="hover raya"></div>
+                        <a href="projectos/STOKHOLM/index.html" class="grid_verweb" title="ver web" target="_blank" rel="noopener noreferrer"> Ver página web</a>
+                        <a href="https://github.com/melvi30/STOKHOLM" class="grid_a" title="github" target="_blank" rel="noopener noreferrer"> <i class="grid_git fab fab fa-github"></i>Ver código</a>
+                    </div>
+                </div>
+                <div class="grid_div form">
+                    <img class="grid_div img" src="assets/form1.png" alt="Formulario" loading="lazy">
+                    <div class="grid_hover">
+                        <h4 class="grid_h4">Ejemplo de formulario de telefónica</h4>
+                        <div class="hover raya"></div>
+                        <a href="projectos/CUESTIONARIO/index.html"  class="grid_verweb" title="ver web" target="_blank" rel="noopener noreferrer"> Ver página web</a>
+                        <a href="https://github.com/melvi30/Formulario" class="grid_a" title="github" target="_blank" rel="noopener noreferrer"> <i class="grid_git fab fab fa-github"></i>Ver código</a>
+                    </div>
+                </div>
+
+                <div class="grid_div more">
+                    <img class="grid_div img" src="assets/texto.png" alt="Formulario" loading="lazy">
+                </div>
+
+            </div>
+
+
+        </section>
+        <section class="section about" id="section-3"> 
+            <div class="about_centrado">
+                <div class="about_div">
+                    <h2 class="about_h2">About me!</h2>
+                    <p class="about_p"> Hola!, mi nombre es Mariana Mujica (aka: Melvi). Soy desarrolladora Front-End y utilizo lenguajes como: HTML, CSS y Javascript, para dar vida a mis proyectos. Tengo formación en Marketing Digital, lo cual me permite combinar ambos mundos para que las páginas tengan el mejor performance y UX posibles. </p>
+                    <button class="about_cv"><a href="assets/cv/CV_Mariana_Mujica_ES.pdf" target="_blank" title="cv_mariana_mujica" rel="noopener noreferrer">Descarga mi CV</a></button>
+                </div>
+                <div class="about_div">
+                    <img class="about_img" src="assets/me1.png" alt="Mariana-Mujica" loading="lazy">
+                </div>
+            </div>
+        </section>
+        <section class="contacto" id="section-4">
+            <div class="contacto_centrado">
+                <h2 class="contacto_h2">Contacto:</h2>
+                    <p class="contacto_email"><i class="contacto_fabm far fa-envelope"></i><a class="mail2" href="mailto:hola@bymelvi.com" title="email" target="_blank" rel="noopener noreferrer">hola@bymelvi.com</a></p></li>
+                    <ul class="contacto_ul">
+                        <li class="contacto_linkedin"><a class="linkedin2" href="https://www.linkedin.com/in/marianamujicag/" title="linkedin" target="_blank" rel="noopener noreferrer"><i class="contacto_fab fab fa-linkedin-in"></i></a></li>
+                        <li class="contacto_git"><a class="git2" href="https://github.com/melvi30" title="linkedin" target="_blank" rel="noopener noreferrer"><i class="contacto_fab fab fab fa-github"></i></a></li>
+                    </ul>
+            </div>
+        </section>
 
 </body>
+</html>
