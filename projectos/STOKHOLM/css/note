@@ -1,0 +1,19 @@
+.header .header .centrado .nav .ul .li .ul2{
+  display: none;
+  width: 100%;
+  min-width: 270px;
+  background-color: white;
+  border-top: #e6ae48 0.5em solid;
+  padding: 1em 0;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #a7a7a7;
+  letter-spacing: 0em;
+  text-transform: capitalize;
+  position: absolute;
+  transform: translateX(-1em) translateY(4em);
+}
+
+.header .centrado .nav .ul .li .ul2 .li2{
+  padding: 1em 1.5em;
+}
