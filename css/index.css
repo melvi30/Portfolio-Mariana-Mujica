@@ -1,4 +1,23 @@
 @charset "UTF-8";
+@keyframes pulse {
+  0% {
+    color: var(--negro);
+  }
+  50% {
+    color: var(--lila);
+  }
+  100% {
+    color: var(--negro);
+  }
+}
+@keyframes opaci {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -108,10 +127,7 @@ html {
   max-width: 5em;
   font-size: 3em;
   font-weight: 900;
-  transition: all 0.7s ease;
-}
-.header_logo:hover {
-  color: var(--lila);
+  animation: pulse 5s infinite;
 }
 .header_fas {
   display: none;
@@ -181,6 +197,7 @@ html {
   min-height: 100vh;
   line-height: 3em;
   margin: auto;
+  animation: opaci 6s 1;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;

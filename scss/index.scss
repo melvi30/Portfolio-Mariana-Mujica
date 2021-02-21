@@ -32,10 +32,12 @@ html{
         // background-color: pink;
         font-size: 3em;
         font-weight: 900;
-        transition: all .7s ease;
+        animation: pulse 5s infinite;
+
+        // transition: all .7s ease;
 
         &:hover{
-            color: var(--lila);
+            // color: var(--lila);
         }
         
     }
@@ -134,6 +136,7 @@ html{
     // background-color:lightcyan;
     line-height: 3em;
     margin: auto;
+    animation: opaci 6s 1;
     
     @include flex( column , wrap , center , center );
 
@@ -167,7 +170,6 @@ html{
     min-height: 100vh;
     text-align: center;
 
-
     &_h2{
         font-weight: 900;
         font-size: 2em;
@@ -194,7 +196,7 @@ html{
 
     &_div{
         position: relative;
-
+       
         &.pixar{
             // background-color: magenta;
             -webkit-box-shadow: -4px 7px 113px -10px rgba(0,0,0,0.28);
