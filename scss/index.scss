@@ -196,7 +196,8 @@ html{
 
     &_div{
         position: relative;
-       
+
+      
         &.pixar{
             // background-color: magenta;
             -webkit-box-shadow: -4px 7px 113px -10px rgba(0,0,0,0.28);
@@ -228,12 +229,9 @@ html{
             }
             
         }
-        &.img{
+            
     }
-  
-    
-
-    }
+      
     &_hover{
         width: 100%;
         min-height: 100%;
@@ -260,38 +258,38 @@ html{
 
         }
     }
-        &_h4{
-            font-weight: 700;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            margin-bottom: .2em;
+    &_h4{
+        font-weight: 700;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        margin-bottom: .2em;
 
+    }
+
+    &_verweb{
+        font-weight: 400;
+        font-size: 1em;
+        margin-bottom: .3em;
+        transition: all .5s ease;
+
+        &:hover{
+            color: var(--lila);
         }
+    }
+    &_a{
+        font-weight: 400;
+        font-size: 1em;
+        transition: all .5s ease;
 
-        &_verweb{
-            font-weight: 400;
-            font-size: 1em;
-            margin-bottom: .3em;
-            transition: all .5s ease;
-
-            &:hover{
-                color: var(--lila);
-            }
+        &:hover{
+            color: var(--lila);
         }
-        &_a{
-            font-weight: 400;
-            font-size: 1em;
-            transition: all .5s ease;
-
-            &:hover{
-                color: var(--lila);
-            }
             
-        }
-        &_git{
-            margin: 0 .5em;
-            font-size: 1.2em
-        }
+    }
+    &_git{
+        margin: 0 .5em;
+        font-size: 1.2em
+    }
 }
 .about{
     width: 100%;
