@@ -70,8 +70,10 @@ html{
             
             &.ver{
                 display: flex;
+                flex-flow: wrap;
 
-                position: relative;           
+                position: relative;
+                        
                
                 
                 /* boton flotante*/
@@ -89,8 +91,7 @@ html{
         @include flex( row , nowrap , flex-end , center );
        
         @media screen and (max-width: 960px){
-            width: 30%;
-            flex-direction: column;
+            flex-flow: column wrap;
 
             position: absolute;
             top:0;
@@ -99,9 +100,8 @@ html{
             background-color: var(--negro);
             color: var(--blanco);
             padding: 1em 0;
+            transform: translateY(1.3em);
             
-
-            transform: translateX(200%);
     
         }
     }

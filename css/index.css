@@ -153,6 +153,7 @@ html {
   }
   .header .nav.ver {
     display: flex;
+    flex-flow: wrap;
     position: relative;
     /* boton flotante*/
   }
@@ -166,15 +167,14 @@ html {
 }
 @media screen and (max-width: 960px) {
   .header_ul {
-    width: 30%;
-    flex-direction: column;
+    flex-flow: column wrap;
     position: absolute;
     top: 0;
     left: 0;
     background-color: var(--negro);
     color: var(--blanco);
     padding: 1em 0;
-    transform: translateX(200%);
+    transform: translateY(1.3em);
   }
 }
 .header_li {
