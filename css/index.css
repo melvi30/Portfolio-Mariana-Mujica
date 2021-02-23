@@ -80,6 +80,7 @@ body {
   --lila: #AA00FF;
   --lila-claro:#aa00ff8f;
   --hover-fondo: #ffffffea;
+  --negro-trns:#000000e0;
   /* tipografias*/
   --tipo-principal: "Roboto", sans-serif;
 }
@@ -102,7 +103,7 @@ html {
 
 @media screen and (max-width: 960px) {
   .body {
-    font-size: 70%;
+    font-size: 90%;
   }
 }
 
@@ -112,15 +113,16 @@ html {
   position: fixed;
   top: 0;
   background-color: var(--blanco);
+  z-index: 2;
 }
 .header_centrado {
   width: 90%;
   min-height: 6em;
   margin: auto;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
 }
 .header_logo {
   width: 100%;
@@ -142,9 +144,9 @@ html {
 .header .nav {
   width: calc( 100% - 5em );
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 @media screen and (max-width: 960px) {
   .header .nav {
@@ -153,7 +155,6 @@ html {
   }
   .header .nav.ver {
     display: flex;
-    flex-flow: wrap;
     position: relative;
     /* boton flotante*/
   }
@@ -167,14 +168,16 @@ html {
 }
 @media screen and (max-width: 960px) {
   .header_ul {
+    width: 100vh;
+    min-height: 100vh;
+    display: flex;
     flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
     position: absolute;
     top: 0;
-    left: 0;
-    background-color: var(--negro);
+    background-color: var(--negro-trns);
     color: var(--blanco);
-    padding: 1em 0;
-    transform: translateY(1.3em);
   }
 }
 .header_li {
@@ -186,10 +189,21 @@ html {
 .header_li:hover {
   color: var(--lila);
 }
+@media screen and (max-width: 960px) {
+  .header_li {
+    font-size: 3em;
+    line-height: 2em;
+  }
+}
 
 .section {
   width: 100%;
   min-height: 90vh;
+}
+@media screen and (max-width: 960px) {
+  .section {
+    font-size: 80%;
+  }
 }
 
 .home {
@@ -202,6 +216,12 @@ html {
   flex-flow: column wrap;
   justify-content: center;
   align-content: center;
+}
+@media screen and (max-width: 960px) {
+  .home {
+    font-size: 65%;
+    line-height: 3.5em;
+  }
 }
 .home_centro {
   width: 90%;
@@ -222,9 +242,20 @@ html {
   font-weight: 900;
   font-size: 3em;
 }
+@media screen and (max-width: 960px) {
+  .home_h3 {
+    margin-top: 0.4em;
+  }
+}
 .home_p {
   font-size: 2em;
   font-weight: 400;
+}
+@media screen and (max-width: 960px) {
+  .home_p {
+    line-height: 1.4em;
+    margin-top: 0.9em;
+  }
 }
 
 .trabajos {
@@ -331,6 +362,9 @@ html {
 .about {
   width: 100%;
   min-height: 100vh;
+  font-smooth: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -396,6 +430,7 @@ html {
   background-color: var(--negro);
   color: var(--blanco);
   font-weight: 600;
+  border: solid 0.3em transparent;
   transition: all 0.5s ease;
 }
 .about_cv:hover {
@@ -405,18 +440,13 @@ html {
 }
 @media screen and (max-width: 960px) {
   .about_cv {
-    font-size: 95%;
     margin-bottom: 2em;
+    font-size: 1.2em;
   }
 }
 .about_img {
   width: 100%;
   background-color: black;
-}
-@media screen and (max-width: 960px) {
-  .about_img {
-    width: 50vh;
-  }
 }
 
 .contacto {
@@ -424,6 +454,11 @@ html {
   min-height: 25vh;
   background-color: var(--negro);
   color: var(--blanco);
+}
+@media screen and (max-width: 960px) {
+  .contacto {
+    font-size: 80%;
+  }
 }
 .contacto_centrado {
   width: 90%;
@@ -446,6 +481,11 @@ html {
 .contacto_email:hover {
   color: var(--lila);
 }
+@media screen and (max-width: 960px) {
+  .contacto_email {
+    font-size: 1.2em;
+  }
+}
 .contacto_fabm {
   margin: 0 0.5em;
 }
@@ -456,18 +496,16 @@ html {
   align-items: center;
   margin-top: 1em;
 }
-.contacto_linkedin {
-  transition: all 0.5s ease;
-  margin: 0 1em;
-  font-size: 1.2em;
-}
-.contacto_linkedin:hover {
-  color: var(--lila);
-}
-.contacto_git {
+.contacto_fab {
   transition: all 0.5s ease;
   font-size: 1.2em;
+  padding: 0.5em 0.5em 1em;
 }
-.contacto_git:hover {
+.contacto_fab:hover {
   color: var(--lila);
+}
+@media screen and (max-width: 960px) {
+  .contacto_fab {
+    font-size: 1.8em;
+  }
 }

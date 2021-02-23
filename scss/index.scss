@@ -5,7 +5,7 @@ html{
 }
 .body{
     @media screen and (max-width: 960px){
-        font-size: 70%;
+        font-size: 90%;
     }
 }
 .header{
@@ -16,6 +16,7 @@ html{
     position: fixed;
     top: 0;
     background-color: var(--blanco);
+    z-index: 2;
 
 
     &_centrado{
@@ -23,7 +24,13 @@ html{
         min-height: 6em;
         // background-color: honeydew;
         margin: auto;
-        @include flex( row , nowrap , space-between , center);
+        @include flex( row , wrap , space-between , center);
+        
+        @media screen and (max-width: 960px){
+            // width: 100%;
+        }
+
+       
     }
     &_logo{
         width: 100%;
@@ -62,7 +69,7 @@ html{
         width: calc( 100% - 5em );
         // min-height: 4em;
         // background-color: rgb(159, 132, 187);
-        @include flex( row , nowrap , center , center );
+        @include flex( row , wrap , center , center );
 
         @media screen and (max-width: 960px){
             width: 100%;
@@ -70,12 +77,10 @@ html{
             
             &.ver{
                 display: flex;
-                flex-flow: wrap;
+                // flex-flow: wrap;
 
                 position: relative;
                         
-               
-                
                 /* boton flotante*/
                 // position: fixed;
                 // bottom: 4em;
@@ -91,16 +96,19 @@ html{
         @include flex( row , nowrap , flex-end , center );
        
         @media screen and (max-width: 960px){
-            flex-flow: column wrap;
+            width: 100vh;
+            min-height: 100vh;
+            @include flex( column , wrap , center , center );
 
             position: absolute;
             top:0;
-            left:0;
+            
 
-            background-color: var(--negro);
+            background-color: var(--negro-trns);
             color: var(--blanco);
-            padding: 1em 0;
-            transform: translateY(1.3em);
+            // text-align: center;
+            // padding: 1em 0;
+            // transform: translateY(1.3em);
             
     
         }
@@ -116,6 +124,11 @@ html{
         &:hover{
             color: var(--lila);
         }
+       
+        @media screen and (max-width: 960px){
+            font-size: 3em;
+            line-height: 2em;
+        }
     }
 }
 
@@ -123,6 +136,10 @@ html{
     width: 100%;
     min-height: 90vh;
     // background-color:rgb(255, 224, 242);
+
+    @media screen and (max-width: 960px){
+        font-size: 80%;
+    }
 }
 .home{
     width: 100%;
@@ -133,6 +150,11 @@ html{
     animation: opaci 6s 1;
     
     @include flex( column , wrap , center , center );
+
+    @media screen and (max-width: 960px){
+        font-size: 65%;
+        line-height: 3.5em;
+    }
 
     &_centro{
         width: 90%;
@@ -152,10 +174,17 @@ html{
     &_h3{
         font-weight: 900;
         font-size: 3em;
+        @media screen and (max-width: 960px){
+            margin-top: .4em;
+        }
     }
     &_p{
         font-size: 2em;
         font-weight: 400;
+        @media screen and (max-width: 960px){
+            line-height: 1.4em;
+            margin-top: .9em;
+        }
     }
 }
 
@@ -289,6 +318,9 @@ html{
     width: 100%;
     min-height: 100vh;
     // background-color: rgb(144, 203, 238);
+    font-smooth: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     
     @include flex( row , nowrap , center , center );
 
@@ -345,6 +377,8 @@ html{
         background-color: var(--negro);
         color: var(--blanco);
         font-weight: 600;
+        border:solid .3em transparent;
+
         transition: all .5s ease;
             &:hover{
                 border: solid .3em var(--lila);
@@ -352,18 +386,14 @@ html{
                 color:var(--lila);
             }
             @media screen and (max-width: 960px){
-                font-size: 95%;
                 margin-bottom: 2em;
+                font-size: 1.2em;
             }
     }
     &_img{
         width: 100%;
         // height: 300px;
         background-color: black;
-
-        @media screen and (max-width: 960px){
-            width: 50vh;
-        }
     }
 }
 .contacto{
@@ -371,7 +401,9 @@ html{
     min-height: 25vh;
     background-color: var(--negro);
     color: var(--blanco);
-    
+    @media screen and (max-width: 960px){
+        font-size: 80%;
+    }
 
     &_centrado{
         width: 90%;
@@ -394,6 +426,10 @@ html{
         &:hover{
             color:var(--lila);
         }
+
+        @media screen and (max-width: 960px){
+            font-size: 1.2em;
+        }
     }
     &_fabm{
         margin: 0 .5em;
@@ -404,19 +440,15 @@ html{
         margin-top: 1em;
     
     }
-    &_linkedin{
+    &_fab{
         transition: all .5s ease;
-        margin: 0 1em;
         font-size: 1.2em;
+        padding: .5em .5em 1em;
         &:hover{
             color:var(--lila);
         }
-    }
-    &_git{
-        transition: all .5s ease;
-        font-size: 1.2em;
-        &:hover{
-            color:var(--lila);
+        @media screen and (max-width: 960px){
+            font-size: 1.8em;
         }
     }
 }
