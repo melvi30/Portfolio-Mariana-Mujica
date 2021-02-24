@@ -52,8 +52,16 @@ form , input , label, textarea , option, select{
 body{
     font-size: 100%;
     font-family: var(--tipo-principal);
-    background-color: var(--blanco);
+    background-color:  #aebfe0;
     color:var(--negro);
+    
+    
+}
+
+body{
+    @media screen and (max-width: 960px){
+        font-size: 90%;
+    }
 }
 
 .form .h1{
@@ -68,27 +76,44 @@ body{
     align-content: center;
     align-items: center;
 
-    color:var(--negro);
-    font-size: 1.5em;
-    font-weight: 600;
+    color:var(--blanco);
+    font-size: 1.7em;
+    font-weight: 900;
+    
+    @media screen and (max-width: 960px){
+        width: 80%;
+        flex-flow: wrap;
+        text-align: center;
+        margin-top: 1em;
+    }
 
     
 }
 .fieldset{
     width: 80%;
     min-height: 3em;
-    background-color: var(--fondo-azul);
+    // background-color: var(--fondo-azul);
     margin: .7em auto;
-    border-radius: .5em;
+
+    border-radius: 19px;
+    background: #aebfe0;
+    box-shadow:  11px 11px 28px #9baac7,
+             -11px -11px 28px #c1d4f9;
+
 }
 .fieldset .legend{
     min-height: 1em;
-    background-color: var(--fondo-rojo);
+    // background-color: var(--fondo-rojo);
     margin-left: .7em;
     padding: .2em;
     color: var(--blanco);
-    border-radius: .3em;
+    font-weight: 600;
 
+    border-radius: 19px;
+    background: #aebfe0;
+    box-shadow:  11px 11px 28px #9baac7,
+             -11px -11px 28px #c1d4f9;  
+    
 }
 .fieldset .centrado{
     display: flex;
@@ -105,14 +130,20 @@ body{
         // min-height: 100px;
         // background-color: royalblue;
         margin: 0 0 .1em;
+
     }
     .inputtxt{
         width: 50%;
         max-width: 20em;
-        background-color: var(--fondo-amarillo);
+        background-color: var(--blanco);
         border: solid var(--borde) .1em;
         border-radius: .3em;
         margin: 0 .5em 0;
+
+
+        @media screen and (max-width: 960px){
+            width: 90%;
+        }
     }
 }
 
@@ -135,6 +166,14 @@ body{
         // min-height: 100px;
     
         margin: 0 -2.2em 0 0;
+        @media screen and (max-width: 960px){
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: 960px){
+        width: 50%;
+        flex-flow: column nowrap;
     }
 }
 
@@ -155,6 +194,11 @@ body{
         background-color: var(--blanco);
         border: solid var(--negro) .1em;
         border-radius: .3em;
+    }
+
+    @media screen and (max-width: 960px){
+        width: 100%;
+        flex-flow: wrap;
     }
 }
 
@@ -188,8 +232,8 @@ body{
         .BF{
             min-width: 6em;
             min-height: 2em;
-            background-color:var(--boton-gris);
-            border-radius: .3em;
+            border-radius: 19px;
+            background: #94a2be;
 
             font-weight: 500;
             color: var(--blanco);
@@ -202,12 +246,16 @@ body{
          // min-height: 100px;
         // background-color: orangered;
         margin: .2em auto;
+        @media screen and (max-width: 960px){
+           margin-top: 1em;
+           margin-bottom: 1em;
+        }
             
         .BD{
             max-width: 6em;
             padding: .2em;
-            background-color:var(--boton-rosa);
-            border-radius: .3em;
+            border-radius: 12px;
+            background: #6a7488;
             color: var(--blanco);
 
 

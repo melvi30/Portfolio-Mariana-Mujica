@@ -57,8 +57,14 @@ form, input, label, textarea, option, select {
 body {
   font-size: 100%;
   font-family: var(--tipo-principal);
-  background-color: var(--blanco);
+  background-color: #aebfe0;
   color: var(--negro);
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    font-size: 90%;
+  }
 }
 
 .form .h1 {
@@ -70,26 +76,37 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
-  color: var(--negro);
-  font-size: 1.5em;
-  font-weight: 600;
+  color: var(--blanco);
+  font-size: 1.7em;
+  font-weight: 900;
+}
+@media screen and (max-width: 960px) {
+  .form .h1 {
+    width: 80%;
+    flex-flow: wrap;
+    text-align: center;
+    margin-top: 1em;
+  }
 }
 
 .fieldset {
   width: 80%;
   min-height: 3em;
-  background-color: var(--fondo-azul);
   margin: 0.7em auto;
-  border-radius: 0.5em;
+  border-radius: 19px;
+  background: #aebfe0;
+  box-shadow: 11px 11px 28px #9baac7, -11px -11px 28px #c1d4f9;
 }
 
 .fieldset .legend {
   min-height: 1em;
-  background-color: var(--fondo-rojo);
   margin-left: 0.7em;
   padding: 0.2em;
   color: var(--blanco);
-  border-radius: 0.3em;
+  font-weight: 600;
+  border-radius: 19px;
+  background: #aebfe0;
+  box-shadow: 11px 11px 28px #9baac7, -11px -11px 28px #c1d4f9;
 }
 
 .fieldset .centrado {
@@ -108,10 +125,15 @@ body {
 .fieldset .centrado .inputtxt {
   width: 50%;
   max-width: 20em;
-  background-color: var(--fondo-amarillo);
+  background-color: var(--blanco);
   border: solid var(--borde) 0.1em;
   border-radius: 0.3em;
   margin: 0 0.5em 0;
+}
+@media screen and (max-width: 960px) {
+  .fieldset .centrado .inputtxt {
+    width: 90%;
+  }
 }
 
 .fieldset .centrado_2 {
@@ -126,6 +148,17 @@ body {
 }
 .fieldset .centrado_2 .radio {
   margin: 0 -2.2em 0 0;
+}
+@media screen and (max-width: 960px) {
+  .fieldset .centrado_2 .radio {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 960px) {
+  .fieldset .centrado_2 {
+    width: 50%;
+    flex-flow: column nowrap;
+  }
 }
 
 .fieldset .centrado_3 {
@@ -142,6 +175,12 @@ body {
   background-color: var(--blanco);
   border: solid var(--negro) 0.1em;
   border-radius: 0.3em;
+}
+@media screen and (max-width: 960px) {
+  .fieldset .centrado_3 {
+    width: 100%;
+    flex-flow: wrap;
+  }
 }
 
 .centrado4 .checkbox {
@@ -169,8 +208,8 @@ body {
 .footer .botones1 .BF {
   min-width: 6em;
   min-height: 2em;
-  background-color: var(--boton-gris);
-  border-radius: 0.3em;
+  border-radius: 19px;
+  background: #94a2be;
   font-weight: 500;
   color: var(--blanco);
 }
@@ -178,10 +217,16 @@ body {
   width: 80%;
   margin: 0.2em auto;
 }
+@media screen and (max-width: 960px) {
+  .footer .botones2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
 .footer .botones2 .BD {
   max-width: 6em;
   padding: 0.2em;
-  background-color: var(--boton-rosa);
-  border-radius: 0.3em;
+  border-radius: 12px;
+  background: #6a7488;
   color: var(--blanco);
 }
